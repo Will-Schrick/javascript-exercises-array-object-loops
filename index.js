@@ -62,49 +62,45 @@ function average(numbers) {
 // El parámetro numbers es el número 100
 function biggestPrime(numbers) {
   // Aquí va tu código
-  defaultPrime = -1 // this is worse case smallest # for my record if there is nothing
+  defaultPrime = -1; // this is worse case smallest # for my record if there is nothing
   for (let i = 2; i <= 100; i++) {
     let Prime = true;
-  for (let w = 2; w < i; w++) {
-    if (i % w === 0) {
-      Prime = false;
-      break;
+    for (let w = 2; w < i; w++) {
+      if (i % w === 0) {
+        Prime = false;
+        break;
+      }
+    }
+    if (Prime) {
+      largestPrime = i;
     }
   }
-  if (Prime) {
-    largestPrime = i;
-    }
-  }
-return largestPrime;
+  return largestPrime;
 }
 
 //this last exercise above was very hard!!! ugh!  Is this correct?
 
-
-
 // Crea una variable person y asígnale un objeto vacío
 const person = {};
 
-
 // Agrega una propiedad `name` al objeto y asígnale "Jorge" como valor
-person.name = 'Jorge';
+person.name = "Jorge";
 
 // Agrega una propiedad `lastName` al objeto y asígnale "Gonzalez" como valor
-person.lastName = 'Gonzalez'
+person.lastName = "Gonzalez";
 
 // Agrega una propiedad `birthYear` al objeto y asígnale 1995 como valor
 person.birthYear = 1995;
 
 // Agrega una función `getFullName` al objeto que devuelva el nombre completo
-person.getFullName = function  () {
+person.getFullName = function () {
   return this.name + " " + this.lastName;
-
-}
+};
 
 // Agrega una función `getBirthYear` al objeto que devuelva la edad (asumiendo que es el año 2023)
 person.getBirthYear = function () {
-  return (2023-this.birthYear)
- }
+  return 2023 - this.birthYear;
+};
 
 /* so I know.. if I wanted to generate today's date, I would use the DATE object and declare it
  // inside the function
@@ -116,3 +112,4 @@ person.getBirthYear = function () {
  }
 
 */
+//completed
